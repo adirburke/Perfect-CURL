@@ -10,8 +10,10 @@ let package = Package(
 	products: [.library(name: "PerfectCURL", targets: ["PerfectCURL"])],
 	dependencies: [
 		.package(url: "https://github.com/PerfectlySoft/Perfect-libcurl.git", from: "2.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/PerfectLib.git", from: "4.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-Thread.git", from: "3.0.0"),
+		// .package(url: "https://github.com/PerfectlySoft/PerfectLib.git", from: "4.0.0"),
+		// .package(url: "https://github.com/PerfectlySoft/Perfect-Thread.git", from: "3.0.0"),
+			.package(path: "~/Dev/Perfect/Perfect"),
+			.package(path: "~/Dev/Perfect/Perfect-Thread"),
 	],
 	targets: [
 		.target(name: "PerfectCURL", dependencies: ["PerfectLib", "PerfectThread"]),
